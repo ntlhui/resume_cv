@@ -1,0 +1,201 @@
+%-------------------------
+% Resume in LateX
+% Author : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Nathan Hui} & Email: \href{mailto:ntlhui@gmail.com}{ntlhui@gmail.com}\\
+  \href{https://linkedin.com/in/ntlhui/}{https://linkedin.com/in/ntlhui/} & Mobile: \href{tel:+14088385393}{+1-408-838-5393} \\
+\end{tabular*}
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {UC San Diego}{La Jolla, CA}
+      {Research Engineer}{Jan 2022 -- Present}
+      \resumeItemListStart
+        \resumeItem{ALERTCalifornia Cyberinfrastructure}
+          {
+            ALERTCalifornia is a state-wide network of over 1200 cameras continuously monitoring for extreme events, recording over 90 frames per second of real-time imagery for real-time delivery to state and county fire dispatch, and providing a hot historical archive of over 40 billion frames dating back to 2020. Deploying and operating Grafana/Loki/Prometheus for $>$ 95\% service availability across networking, storage, and compute systems.
+        }
+        \resumeItem{ALERTCalifornia Machine Learning}
+        {
+            Machine learning pipelines leveraging active and supervised learning approaches to train and operate models for wildlife detection and anomaly detection in ALERTCalifornia camera feeds. Model architectures include Vision Transformers and CNNs. Development is focused on throughput and coverage across all ALERTCalifornia camera feeds. Working on software backend architecture, model optimization, and data models.
+        }
+        \resumeItem{Scripps Center for Marine Archaeology}
+          {Scripps Center for Marine Archaeology supports underwater 3D mapping projects in a variety of environments including large coral reefs, underwater caves, and coastal cliffs. Systems include SLAM-based camera navigation systems, RTK-GPS couple camera systems, and diver-operated camera rigs. Worked on data acquisition systems, data ingest pipelines, and system hardening/reliability.}
+        \resumeItem{Epipolar Plane Imaging Demonstrator}
+            {
+                Technology demonstration of synchronized multi-camera imaging rig for large-area 3D imaging from underwater vehicles for USN ONR. Worked on camera calibration, data acquisition system, and data ingest pipelines.
+            }
+        \resumeItem{Smartfin}
+            {
+                Intelligent sensorized surfboard fin for citizen scientist monitoring of coastlines. Developed as a modular platform for measuring wave height, temperature, and salinity, with capability to support future oceanographic sensors. Worked on firmware architecture, firmware design, backend design, and devops.
+            }
+        \resumeItem{FishSense}
+            {
+                Low-cost laser camera for citizen scientist monitoring of fish populations. Worked on camera calibration procedures, system verification and validation, and software architecture.
+            }
+      \resumeItemListEnd
+
+
+    \resumeSubheading
+      {Teledyne RD Instruments}{Poway, CA}
+      {Firmware Engineer}{Nov 2019 -- Jan 2022}
+      \resumeItemListStart
+        \resumeItem{STM32 Firmware Development}
+          {Small form-factor next generation Doppler Velocity Log based on STM32 hardware for small AUV/ROV applications. Worked on hardware drivers, board support packages, and communications drivers.}
+        \resumeItem{68k Firmware Development}
+          {FPGA based replacement for 68k processors used in older instruments. Optimized CI/CD techniques for rapid test and validation of DSP design, porting and validation of existing firmware to new processor.}
+        \resumeItem{System Verification/Validation}
+          {Long duration (30+ day) testing of instruments for transient failures. Worked on test automation, test data analysis, and monitoring systems.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {UC San Diego}{La Jolla, CA}
+      {Graduate Researcher}{Jan 2017 -- Sep 2019}
+      \resumeItemListStart
+        \resumeItem{Radio Telemetry Tracker}
+          {
+            Drone with embedded software defined radio for rapid simultaneous tracking of multiple animals with radio transmitters. Worked on digital signal processing, location estimation, data visualization, and system architecture.
+          }
+        \resumeItem{HemiPiCam}
+          {
+            Hemispherical multi-camera array of Raspberry Pi Zero cameras for underwater imaging. Worked on automated camera synchronization, data acquisition, and data processing pipelines.
+          }
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+% \section{Projects}
+%   \resumeSubHeadingListStart
+%     \resumeSubItem{QuantSoftware Toolkit}
+%       {Open source Python library for financial data analysis and machine learning for finance.}
+%     \resumeSubItem{GitHub Visualization}
+%       {Data visualization of Git log data using D3 to analyze project trends over time.}
+%     \resumeSubItem{Recommendation System}
+%       {Music and movie recommender systems using collaborative filtering on public datasets.}
+%     \resumeSubItem{Mac Setup}
+%       {Book that gives step-by-step instructions on setting up developer environment on macOS.}
+%   \resumeSubHeadingListEnd
+
+%
+%--------SKILLS------------
+%\section{Skills}
+%  \resumeSubHeadingListStart
+%    \item{
+%      \textbf{Languages}{: Scala, Python, JavaScript, C++, SQL, Java}
+%      \hfill
+%      \textbf{Technologies}{: AWS, Play, React, Kafka, GCE}
+%    }
+%  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {UC San Diego}{La Jolla, CA}
+      {Master of Science in Electrical Engineering (Intell. Systems, Robotics, and Cntrls); GPA: 3.005}{Jan 2017 -- Sep 2019}
+    \resumeSubheading
+      {UC San Diego}{La Jolla, CA}
+      {Bachelor of Science in Electrical Engineering (Software Systems); GPA: 3.092}{Sep 2012 -- Dec 2016}
+  \resumeSubHeadingListEnd
+
+
+
+
+%-------------------------------------------
+\end{document}
